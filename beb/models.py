@@ -62,6 +62,7 @@ class EntriesHome(models.Model):
 
 
 class Slider(models.Model):
+    ID = models.AutoField(primary_key=True)
     codice = models.CharField(max_length=24)
     img = models.CharField(max_length=100)
     titolo = models.CharField(max_length=64)

@@ -45,7 +45,7 @@
 
 <body >
 	
-    <div   id="wrapper">
+<div   id="wrapper">
 
 		
 	<div class="slider-wrapper">
@@ -54,7 +54,7 @@
 
 			<span>
 			<img class="zoom" src= "{% static 'beb/img/'%}{{sliders.codice}}/{{sliders.img}}" alt="" title="#htmlcaption{{sliders.ID}}" />
-			</span>
+	   		</span>
 			
 			{% endfor %}
 	    </div>
@@ -64,12 +64,12 @@
 	{% for sliders in slider %}
     <div id="htmlcaption{{sliders.ID}}" class="nivo-html-caption">
 		
-		<h1><a style="color:#000000;" href="{{sliders.link}}">{{sliders.caption}}</a></h1>
-	    <p> {{slider.link}} <br> <a href=""> {{ luogo }} Continua...</a> </p>
-
+		<h1><a style="color:#000000; font-size: 1em;" href="{{sliders.link}}">{{sliders.titolo}}</a></h1>
+		<br>
+		<p>  <a href=""> Posizionati con il mouse sull'immagine per fermare la slide <br> clicca qui per Continuare...</a></p>
 	</div>
-{% endfor %}
-	</div>
+	{% endfor %}
+</div>
 	
 </body>
 </html>

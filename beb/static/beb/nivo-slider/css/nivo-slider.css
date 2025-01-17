@@ -108,21 +108,21 @@
  }
  
  .nivo-caption h1 {
-	 padding:10px 20px;
+	 padding:5px 10px;
 	 margin:0;
 	 background:#fff;
 	 color:#000;
 	 opacity:.8;
-	 font-weight:400;
+	 font-weight:200;
 	 float:left;
  }
  
  .nivo-caption p {
-	 padding:10px 20px;
+	 padding:5px 10px;
 	 margin:0;
 	 background:#000;
 	 opacity:.8;
-	 font-weight:400;
+	 font-weight:200;
 	 float:left;
  }
  

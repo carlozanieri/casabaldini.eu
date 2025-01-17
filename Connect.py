@@ -198,11 +198,11 @@ class Connect:
         return body
    
     def slider(self, luogo):
-        conn = sqlite3.connect("carlozanieri.db")
+        conn = sqlite3.connect("casabaldini.db")
         db = MySQLdb.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
        
-        cursor = db.cursor()
-        data = conn.execute("SELECT *  from slider where codice = '" + luogo + "'")
+        #cursor = db.cursor()
+        data = conn.execute("SELECT * from beb_slider ")
         #cursor.execute("SELECT *  from slider where codice = '" + luogo + "'")
         ##cursor.execute("SELECT *  from slider")
         slider = data.fetchall()
