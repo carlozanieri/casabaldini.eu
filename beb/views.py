@@ -41,3 +41,14 @@ def menu(request):
     context = {"menuweb": menuweb, "submenu": submenu}
     return render(request, "beb/menu5.html", context)
 
+
+def sanpiero(request):
+    luogo = request.GET.get('luogo')
+    entries = Entries.objects.filter(slug='sanpiero')
+    menuweb = Menuweb.objects.filter(livello=2)
+    submenu = Menuweb.objects.filter(livello=3)
+    slider = Slider.objects.filter(codice='sanpiero')[:]
+    
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider}
+   
+    return render(request, "beb/index.html", context)
