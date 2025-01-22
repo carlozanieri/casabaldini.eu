@@ -13,7 +13,7 @@ def index(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.all()[:]
     #slider = Connect.slider("", "mugello")
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider}
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "luogo=": 'sanpiero'}
    
     return render(request, "beb/index.html", context)
 
@@ -27,8 +27,8 @@ def detail(request, author_id):
 
 def slide(request):
     luogo = request.GET.get('luogo')
-    #slider = Slider.objects.all()[:]
-    slider = Slider.objects.filter(codice='mugello')[:]
+    slider = Slider.objects.all()[:]
+    ##slider = Slider.objects.filter(codice=luogo)[:]
     #slider = Connect.slider("", "mugello")
     context = {"slider": slider, 'luogo': luogo}
     return render(request, "beb/nivo.html", context)
@@ -44,10 +44,10 @@ def menu(request):
 
 def sanpiero(request):
     luogo = request.GET.get('luogo')
-    entries = Entries.objects.filter(slug='sanpiero')
+    entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
-    slider = Slider.objects.filter(codice='sanpiero')[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
     
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider}
    
