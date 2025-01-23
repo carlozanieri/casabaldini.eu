@@ -4,7 +4,7 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 from .models import Menuweb
 from .models import Entries
 from .models import Slider
-from Connect import Connect
+#from Connect import Connect
 
 def index(request):
    
