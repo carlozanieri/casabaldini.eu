@@ -62,7 +62,7 @@ class EntriesHome(models.Model):
 
 
 class Slider(models.Model):
-    ID = models.AutoField(primary_key=True)
+    #ID = models.AutoField(primary_key=True)
     codice = models.CharField(max_length=24)
     img = models.CharField(max_length=100)
     titolo = models.CharField(max_length=64)
@@ -71,3 +71,12 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.titolo()
+    
+class links(models.Model):
+    #ID = models.AutoField(primary_key=True)
+    codice = models.CharField(max_length=24)
+    img = models.CharField(max_length=100)
+    titolo = models.CharField(max_length=64)
+    descrisione = models.CharField(max_length=512)
+    link = models.CharField(max_length=512)
+    attivo = models.IntegerField(default=0)
