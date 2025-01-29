@@ -8,13 +8,14 @@ from .models import Slider
 
 
 def index(request):
-   
-    entries = Entries.objects.filter(slug='mugello')
+    luogo = "index"
+    entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
-    slider = Slider.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)
     #slider = Connect.slider("", "mugello")
-    luogo = request.GET.get('luogo')
+    #luogo = request.GET.get('luogo')
+    
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "luogo": luogo}
    
     return render(request, "beb/index.html", context)
@@ -29,8 +30,9 @@ def detail(request, author_id):
 
 def slide(request):
     luogo = request.GET.get('luogo')
-    slider = Slider.objects.all()[:]
-    ##slider = Slider.objects.filter(codice=luogo)[:]
+    ##slider = Slider.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    
     #slider = Connect.slider("", "mugello")
     context = {"slider": slider, 'luogo': luogo}
     return render(request, "beb/nivo.html", context)
@@ -45,22 +47,24 @@ def menu(request):
 
 
 def sanpiero(request):
-    luogo = request.GET.get('luogo')
+    #luogo = request.GET.get('luogo')
+    luogo = "sanpiero"
     entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  'luogo': luogo}
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "luogo": luogo}
     return render(request, "beb/index.html", context)
 
 
 def mugello(request):
-    luogo = request.GET.get('luogo')
+    #luogo = request.GET.get('luogo')
+    luogo = "mugello"
     entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  'luogo': luogo}
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "luogo": luogo}
     return render(request, "beb/index.html", context)
