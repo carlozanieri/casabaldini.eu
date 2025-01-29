@@ -34,7 +34,7 @@ def slide(request):
     slider = Slider.objects.filter(codice=luogo)[:]
     
     #slider = Connect.slider("", "mugello")
-    context = {"slider": slider, 'luogo': luogo}
+    context = {"slider": slider, "luogo": luogo}
     return render(request, "beb/nivo.html", context)
 
 

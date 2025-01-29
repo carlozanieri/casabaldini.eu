@@ -9,6 +9,6 @@ urlpatterns = [
     path("slide", views.slide, name="slide"),
     path("menu", views.menu, name="menu"),
     path("sanpiero", views.sanpiero, name="sanpiero"),
-    path("mugello", views.sanpiero, name="mugello"),
+    path("mugello", views.mugello, name="mugello"),
    
 ]
