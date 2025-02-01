@@ -1,9 +1,11 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.clickjacking import xframe_options_exempt
 
-from .models import Menuweb
+from .models import Links, Menuweb
 from .models import Entries
 from .models import Slider
+from .models import Links
+
 #from Connect import Connect
 
 
@@ -67,4 +69,16 @@ def mugello(request):
     slider = Slider.objects.filter(codice=luogo)[:]
     
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "luogo": luogo}
+    return render(request, "beb/index.html", context)
+
+
+def linkutili(request):
+    #luogo = request.GET.get('luogo')
+    luogo = "mugello"
+    entries = Entries.objects.filter(slug=luogo)
+    menuweb = Menuweb.objects.filter(livello=2)
+    submenu = Menuweb.objects.filter(livello=3)
+    links = Links.objects.filter(attivo=0)[:] 
+    slider = Slider.objects.filter(codice=luogo)[:]
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links,  "luogo": luogo, "slider": slider}
     return render(request, "beb/index.html", context)

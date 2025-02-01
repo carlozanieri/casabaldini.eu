@@ -10,5 +10,6 @@ urlpatterns = [
     path("menu", views.menu, name="menu"),
     path("sanpiero", views.sanpiero, name="sanpiero"),
     path("mugello", views.mugello, name="mugello"),
+    path("linkutili", views.linkutili, name="linkutili"),
    
 ]

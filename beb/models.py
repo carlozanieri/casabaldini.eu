@@ -71,12 +71,14 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.titolo()
-    
-class links(models.Model):
+
+
+class Links(models.Model):
     #ID = models.AutoField(primary_key=True)
     codice = models.CharField(max_length=24)
     img = models.CharField(max_length=100)
     titolo = models.CharField(max_length=64)
-    descrisione = models.CharField(max_length=512)
+    descrizione = models.CharField(max_length=512)
+    descrisione = models.CharField(max_length=512, default=" ")
     link = models.CharField(max_length=512)
     attivo = models.IntegerField(default=0)
