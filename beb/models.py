@@ -78,7 +78,6 @@ class Links(models.Model):
     codice = models.CharField(max_length=24)
     img = models.CharField(max_length=100)
     titolo = models.CharField(max_length=64)
-    descrizione = models.CharField(max_length=512)
-    descrisione = models.CharField(max_length=512, default=" ")
+    descrizione = models.CharField(max_length=512, default=" ")
     link = models.CharField(max_length=512)
     attivo = models.IntegerField(default=0)

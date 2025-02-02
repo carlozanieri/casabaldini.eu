@@ -78,7 +78,7 @@ def linkutili(request):
     entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
-    links = Links.objects.filter(attivo=0)[:] 
+    links = Links.objects.all()[:]
     slider = Slider.objects.filter(codice=luogo)[:]
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links,  "luogo": luogo, "slider": slider}
-    return render(request, "beb/index.html", context)
+    return render(request, "beb/linkutili.html", context)
