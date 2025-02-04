@@ -34,7 +34,7 @@ div>
 	<p style="text-align: justify;  color:#7e342d; margin-right:15%;margin-left:10%;">
 		
 		{% for link in links %}
-		<h1><a style="color:#05155f; font-size: 0.5em; margin-left:3%;" href="{{link.link}}"> <img class="zoom" src="{% static 'beb/img/links/'%}{{link.img}}" width={{link.width}} height={{link.height}} alt=""/>&nbsp; {{link.titolo}} </a></h1><br>
+		<h1><a style="color:#05155f; font-size: 0.5em; margin-left:3%;" href="{{link.link}}"> <img class="zoom" src="{% static 'beb/img/links/'%}{{link.img}}" width={{link.width}} height={{link.height}} alt=""/>&nbsp; {{link.titolo}} </a></h1>
 		{% endfor %} 
 		
 		</p>
