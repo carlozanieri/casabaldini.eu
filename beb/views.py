@@ -15,10 +15,11 @@ def index(request):
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)
+    links = Links.objects.all()[:]
     #slider = Connect.slider("", "mugello")
     #luogo = request.GET.get('luogo')
     
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "luogo": luogo}
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "links": links, "luogo": luogo}
    
     return render(request, "beb/index.html", context)
 
@@ -55,8 +56,8 @@ def sanpiero(request):
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
-    
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "luogo": luogo}
+    links = Links.objects.all()[:]
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo}
     return render(request, "beb/index.html", context)
 
 
@@ -67,8 +68,8 @@ def mugello(request):
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
-    
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "luogo": luogo}
+    links = Links.objects.all()[:]
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo}
     return render(request, "beb/index.html", context)
 
 
