@@ -39,7 +39,7 @@ def slide(request):
     #slider = Connect.slider("", "mugello")
     context = {"slider": slider, "luogo": luogo}
     #return render(request, "beb/nivo.html", context)
-    return render(request, "beb/3d/dist/index.html", context)
+    return render(request, "beb/carousel.html", context)
 
 
 def menu(request):
