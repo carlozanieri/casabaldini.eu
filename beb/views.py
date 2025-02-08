@@ -39,8 +39,17 @@ def slide(request):
     #slider = Connect.slider("", "mugello")
     context = {"slider": slider, "luogo": luogo}
     #return render(request, "beb/nivo.html", context)
-    return render(request, "beb/carousel.html", context)
+    return render(request, "beb/nivo.html", context)
 
+def carousel(request):
+    luogo = request.GET.get('luogo')
+    ##slider = Slider.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    
+    #slider = Connect.slider("", "mugello")
+    context = {"slider": slider, "luogo": luogo}
+    #return render(request, "beb/nivo.html", context)
+    return render(request, "beb/carousel.html", context)
 
 def menu(request):
         
