@@ -9,8 +9,8 @@ urlpatterns = [
     path("slide", views.slide, name="slide"),
     path("carousel", views.carousel, name="carousel"),
     path("menu", views.menu, name="menu"),
-    path("sanpiero", views.sanpiero, name="sanpiero"),
-    path("mugello", views.mugello, name="mugello"),
+    path("camere", views.camere, name="camere"),
+    path("lasala", views.lasala, name="lasala"),
     path("linkutili", views.linkutili, name="linkutili"),
     path("camere", views.camere, name="camere"),
    

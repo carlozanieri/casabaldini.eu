@@ -51,7 +51,7 @@ def carousel(request):
     #return render(request, "beb/nivo.html", context)
     return render(request, "beb/carousel.html", context)
 
-def camere(request):
+def camere__1(request):
     luogo = request.GET.get('luogo')
     ##slider = Slider.objects.all()[:]
     slider = Slider.objects.filter(codice=luogo)[:]
@@ -70,9 +70,9 @@ def menu(request):
     return render(request, "beb/menu5.html", context)
 
 
-def sanpiero(request):
+def camere(request):
     #luogo = request.GET.get('luogo')
-    luogo = "sanpiero"
+    luogo = "camere"
     entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
@@ -83,9 +83,9 @@ def sanpiero(request):
     return render(request, "beb/index.html", context)
 
 
-def mugello(request):
+def lasala(request):
     #luogo = request.GET.get('luogo')
-    luogo = "mugello"
+    luogo = "lasala"
     entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
