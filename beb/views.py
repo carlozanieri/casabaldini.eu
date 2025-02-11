@@ -18,8 +18,8 @@ def index(request):
     links = Links.objects.all()[:]
     #slider = Connect.slider("", "mugello")
     #luogo = request.GET.get('luogo')
-    
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "links": links, "luogo": luogo}
+    carousel="slide"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "links": links, "luogo": luogo, "carousel":carousel}
    
     return render(request, "beb/index.html", context)
 
@@ -51,6 +51,17 @@ def carousel(request):
     #return render(request, "beb/nivo.html", context)
     return render(request, "beb/carousel.html", context)
 
+def camere(request):
+    luogo = request.GET.get('luogo')
+    ##slider = Slider.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    carousel="carousel"
+    links = Links.objects.all()[:]
+    context = {"slider": slider, "luogo": luogo, "carousel":carousel,  "links": links}
+   
+    #return render(request, "beb/nivo.html", context)
+    return render(request, "beb/index.html", context)
+
 def menu(request):
         
     menuweb = Menuweb.objects.filter(livello=2)
@@ -67,7 +78,8 @@ def sanpiero(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo}
+    carousel="carousel"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel":carousel}
     return render(request, "beb/index.html", context)
 
 
@@ -79,7 +91,8 @@ def mugello(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo}
+    carousel="carousel"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel":carousel}
     return render(request, "beb/index.html", context)
 
 

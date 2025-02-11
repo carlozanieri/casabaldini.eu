@@ -12,5 +12,6 @@ urlpatterns = [
     path("sanpiero", views.sanpiero, name="sanpiero"),
     path("mugello", views.mugello, name="mugello"),
     path("linkutili", views.linkutili, name="linkutili"),
+    path("camere", views.camere, name="camere"),
    
 ]
