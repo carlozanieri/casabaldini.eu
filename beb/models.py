@@ -67,6 +67,7 @@ class Slider(models.Model):
     img = models.CharField(max_length=100)
     titolo = models.CharField(max_length=64)
     caption = models.CharField(max_length=512)
+    testo = models.CharField(max_length=2048)
     link = models.CharField(max_length=512)
 
     def __str__(self):

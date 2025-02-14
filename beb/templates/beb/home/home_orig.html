@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}	
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,11 +7,11 @@
 
 <title>Slider Pro</title>
 
-<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="{% static 'beb/home/dist/css/slider-pro.min.css'%}" media="screen"/>
+<link rel="stylesheet" type="text/css" href="{% static 'beb/home/dist/css/examples.css'%}" media="screen"/>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
-<script type="text/javascript" src="../dist/js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="{% static 'beb/home/dist/js/jquery.sliderPro.min.js'%}"></script>
 
 <script type="text/javascript">
 	$( document ).ready(function( $ ) {
@@ -42,7 +43,7 @@
 	<div id="example1" class="slider-pro">
 		<div class="sp-slides">
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image1_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image1_large.jpg"/>
 				
@@ -66,7 +67,7 @@
 			</div>
 
 	        <div class="sp-slide">
-	        	<img class="sp-image" src="../src/css/images/blank.gif"
+	        	<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 	        		data-src="https://bqworks.net/slider-pro/images/image2_medium.jpg"
 	        		data-retina="https://bqworks.net/slider-pro/images/image2_large.jpg"/>
 
@@ -90,7 +91,7 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image3_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image3_large.jpg"/>
 
@@ -108,7 +109,7 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image4_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image4_large.jpg"/>
 
@@ -120,10 +121,10 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image5_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image5_large.jpg"/>
-
+					../src
 				<p class="sp-layer sp-white sp-padding" 
 					data-vertical="10" data-horizontal="2%" data-width="96%" 
 					data-show-transition="down" data-show-delay="400" data-hide-transition="up">
@@ -132,7 +133,7 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image6_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image6_large.jpg"/>
 
@@ -143,7 +144,7 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image7_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image7_large.jpg"/>
 
@@ -155,13 +156,13 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image8_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image8_large.jpg"/>
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image9_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image9_large.jpg"/>
 
@@ -179,7 +180,7 @@
 			</div>
 
 			<div class="sp-slide">
-				<img class="sp-image" src="../src/css/images/blank.gif"
+				<img class="sp-image" src="{% static 'beb/home/dist/css/images/blank.gif'%}"
 					data-src="https://bqworks.net/slider-pro/images/image10_medium.jpg"
 					data-retina="https://bqworks.net/slider-pro/images/image10_large.jpg"/>
 			</div>

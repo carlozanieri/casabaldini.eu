@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}	
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>casabaldini.eu {{urlx}}</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'beb/home/dist/css/slider-pro.min.css'%}" media="screen"/>
+<link rel="stylesheet" type="text/css" href="{% static 'beb/home/dist/css/examples.css'%}" media="screen"/>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+<script type="text/javascript" src="{% static 'beb/home/dist/js/jquery.sliderPro.min.js'%}"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example1' ).sliderPro({
+			width: 960,
+			height: 500,
+			arrows: true,
+			buttons: false,
+			waitForLayers: true,
+			thumbnailWidth: 200,
+			thumbnailHeight: 100,
+			thumbnailPointer: true,
+			autoplay: false,
+			autoScaleLayers: false,
+			breakpoints: {
+				500: {
+					thumbnailWidth: 120,
+					thumbnailHeight: 50
+				}
+			}
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+	<div id="example1" class="slider-pro">
+		<div class="sp-slides">
+			{% for sliders in slider %}
+
+	        <div class="sp-slide">
+				<img style="width:110%;" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="#htmlcaption{{sliders.id}}" />
+
+				<h3 class="sp-layer sp-black sp-padding" 
+					data-horizontal="40" data-vertical="10%" 
+					data-show-transition="left" data-hide-transition="left">
+					{{sliders.titolo}}
+				</h3>
+
+				<p class="sp-layer sp-white sp-padding hide-medium-screen" 
+					data-horizontal="40" data-vertical="22%" 
+					data-show-transition="left" data-show-delay="200" data-hide-transition="left" data-hide-delay="200">
+					{{sliders.caption}}
+				</p>
+
+				<p style="background-color:#330101;" class="sp-layer sp-black sp-padding hide-small-screen" 
+					data-horizontal="40" data-vertical="34%" data-width="650" 
+					data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="500">
+					{{sliders.testo}}
+				</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		
+    </div>
+
+</body>
+</html>
