@@ -86,7 +86,7 @@ body {
 	color: #b1aea6;
 	background: #fffcf5;
 	min-height: 800px;
-	background-image: url(../images/background.jpg);
+	/*background-image: url(../images/background.jpg); */
 }
 
 a {
