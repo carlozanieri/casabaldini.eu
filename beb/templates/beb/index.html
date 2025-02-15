@@ -41,10 +41,13 @@
 		</p>-->
 	
 		<footer>
-			<h1 style="color:#000000; margin-left:30%; margin-right:25%; margin-top:5%; margin-bottom:2%;">Links Utili</h1>
-					{% for link in links %}
-					<a style="color:#05155f; font-size: 1.5em; margin-left:3%; font-weight: bold;" href="{{link.link}}"> <img class="zoom" src="{% static 'beb/img/links/'%}{{link.img}}" width={{link.width}} height={{link.height}} alt=""/>&nbsp; {{link.titolo}} </a>
-					{% endfor %} 
+			<marquee  loop="-3"	 scrolldelay="0.5" direction="right">
+			{% for link in links %}
+			
+					<a style="color:#05155f; font-size: 1.5em; margin-left:3%; margin-top:3%; font-weight: bold;" href="{{link.link}}"> <img class="zoom" src="{% static 'beb/img/links/'%}{{link.img}}" width={{link.width}} height={{link.height}} alt=""/>&nbsp; {{link.titolo}} </a>
+				
+			{% endfor %} 
+		</marquee>		
 		</footer>
 	<!--<footer>
 		<h1 style="color:#000000; margin-left:30%; margin-right:25%; margin-top:10%; margin-bottom:5%;">Si ringraziano gli Sponsor</h1>
