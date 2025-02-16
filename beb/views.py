@@ -95,6 +95,17 @@ def lasala(request):
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel":carousel}
     return render(request, "beb/index.html", context)
 
+def ilpaese(request):
+    #luogo = request.GET.get('luogo')
+    luogo = "ilpaese"
+    entries = Entries.objects.filter(slug=luogo)
+    menuweb = Menuweb.objects.filter(livello=2)
+    submenu = Menuweb.objects.filter(livello=3)
+    slider = Slider.objects.filter(codice=luogo)[:]
+    links = Links.objects.all()[:]
+    carousel="carousel"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel":carousel}
+    return render(request, "beb/index.html", context)
 
 def linkutili(request):
     #luogo = request.GET.get('luogo')
