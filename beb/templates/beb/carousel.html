@@ -19,7 +19,7 @@
 	{% for sliders in slider %}
 	<div class="carousel-item" style="text-align: justify;  color:#7e342d; margin-right:15%;margin-left:-15%;">
 
-		<img class="zoom" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="#htmlcaption{{sliders.id}}" />
+		<img class="zoom" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="{{sliders.titolo}}" />
 		<h3>
 			{{sliders.titolo}}
 		</h3>
