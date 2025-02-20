@@ -26,8 +26,8 @@
 			thumbnailWidth: 200,
 			thumbnailHeight: 100,
 			thumbnailPointer: true,
-			autoplay: false,
-			autoScaleLayers: false,
+			autoplay: true,
+			autoScaleLayers: true,
 			breakpoints: {
 				500: {
 					thumbnailWidth: 120,
@@ -47,7 +47,7 @@
 			{% for sliders in slider %}
 
 	        <div class="sp-slide">
-				<img class="zoom" style="width:100%; height: auto;" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="{{sliders.caption}}" />
+				<img  style="width:100%; height: auto;" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="{{sliders.caption}}" />
 
 				<h3 class="sp-layer sp-black sp-padding" 
 					data-horizontal="40" data-vertical="10%" 
@@ -57,7 +57,7 @@
 
 				<p class="sp-layer sp-white sp-padding hide-medium-screen" 
 					data-horizontal="40" data-vertical="22%" 
-					data-show-transition="left" data-show-delay="200" data-hide-transition="left" data-hide-delay="200">
+					data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="400">
 					{{sliders.caption}}
 				</p>
 

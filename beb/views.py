@@ -35,9 +35,9 @@ def slide(request):
     luogo = request.GET.get('luogo')
     ##slider = Slider.objects.all()[:]
     slider = Slider.objects.filter(codice=luogo)[:]
-    
+    camere = Slider.objects.filter(codice="camere")[:]
     #slider = Connect.slider("", "mugello")
-    context = {"slider": slider, "luogo": luogo}
+    context = {"slider": slider, "luogo": luogo, "camere":camere}
     #return render(request, "beb/nivo.html", context)
     return render(request, "beb/home/home.html", context)
 

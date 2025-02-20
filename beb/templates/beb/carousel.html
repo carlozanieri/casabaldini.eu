@@ -10,15 +10,36 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'beb/menu_6/css/component.css'%}" />
 		
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'/>
-  <link rel="stylesheet" type="text/css" href="{% static 'beb/dist/style.css'%}" />
- <!-- <link rel="stylesheet" type="text/css" href="{% static 'beb/css_2/base.css'%}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'beb/css_2/slider.css'%}" /> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'beb/home/dist/css/style.css'%}" />
+ 
+  <script type="text/javascript">
+  $(document).ready(function() {
+	$('.carousel').carousel({
+		width: 960,
+		height: 500,
+		arrows: true,
+		buttons: false,
+		waitForLayers: true,
+		thumbnailWidth: 200,
+		thumbnailHeight: 100,
+		thumbnailPointer: true,
+		autoplay: true,
+		autoScaleLayers: true,
+		breakpoints: {
+			500: {
+				thumbnailWidth: 120,
+				thumbnailHeight: 50
+			}
+		}
+	});
+});
+</script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="carousel">
+<div class="carousel" >
 	{% for sliders in slider %}
-	<div class="carousel-item" style="text-align: justify;  color:#7e342d; margin-right:15%;margin-left:-15%;">
+	<div class="carousel-item"  style="text-align: justify;  color:#7e342d; margin-right:15%;margin-left:-15%;">
 
 		<img class="zoom" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="{{sliders.titolo}}" />
 		<h3>
@@ -39,7 +60,8 @@
 	</marquee>		
 	</footer>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script><script  src="{% static 'beb/dist/script.js'%}"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
+<script  src="{% static 'beb/home/dist/js/script.js'%}"></script>
 
 </body>
 </html>
