@@ -14,5 +14,6 @@ urlpatterns = [
     path("linkutili", views.linkutili, name="linkutili"),
     path("camere", views.camere, name="camere"),
     path("ilpaese", views.ilpaese, name="ilpaese"),
+    path("camere_frame", views.camere_frame, name="camere_frame"),
    
 ]
