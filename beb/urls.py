@@ -15,5 +15,6 @@ urlpatterns = [
     path("camere", views.camere, name="camere"),
     path("ilpaese", views.ilpaese, name="ilpaese"),
     path("camere_frame", views.camere_frame, name="camere_frame"),
+    path("lasala_frame", views.lasala_frame, name="lasala_frame"),
    
 ]
