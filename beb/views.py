@@ -4,9 +4,6 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 from .models import Links, Menuweb
 from .models import Entries
 from .models import Slider
-from .models import Links
-
-#from Connect import Connect
 
 
 def index(request):
@@ -37,9 +34,10 @@ def slide(request):
     slider = Slider.objects.filter(codice=luogo)[:]
     camere = Slider.objects.filter(codice="camere")[:]
     #slider = Connect.slider("", "mugello")
-    context = {"slider": slider, "luogo": luogo, "camere":camere}
+    context = {"slider": slider, "luogo": luogo, "camere": camere}
     #return render(request, "beb/nivo.html", context)
     return render(request, "beb/home/home.html", context)
+
 
 def carousel(request):
     luogo = request.GET.get('luogo')
@@ -51,16 +49,18 @@ def carousel(request):
     #return render(request, "beb/nivo.html", context)
     return render(request, "beb/carousel.html", context)
 
+
 def camere__1(request):
     luogo = request.GET.get('luogo')
     ##slider = Slider.objects.all()[:]
     slider = Slider.objects.filter(codice=luogo)[:]
-    carousel="carousel"
+    carousel = "carousel"
     links = Links.objects.all()[:]
-    context = {"slider": slider, "luogo": luogo, "carousel":carousel,  "links": links}
+    context = {"slider": slider, "luogo": luogo, "carousel": carousel,  "links": links}
    
     #return render(request, "beb/nivo.html", context)
     return render(request, "beb/index.html", context)
+
 
 def menu(request):
         
@@ -78,9 +78,10 @@ def camere(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel="carousel"
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel":carousel}
+    carousel = "slide"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
+
 
 def camere_frame(request):
     #luogo = request.GET.get('luogo')
@@ -90,9 +91,10 @@ def camere_frame(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel="carousel"
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel":carousel}
-    return render(request, "beb/camere_frame.html", context)
+    carousel = "carousel"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel": carousel}
+    return render(request, "beb/carousel.html", context)
+
 
 def lasala(request):
     #luogo = request.GET.get('luogo')
@@ -102,9 +104,10 @@ def lasala(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel="carousel"
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel":carousel}
+    carousel = "slide"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
+
 
 def lasala_frame(request):
     #luogo = request.GET.get('luogo')
@@ -112,11 +115,13 @@ def lasala_frame(request):
     entries = Entries.objects.filter(slug=luogo)
     menuweb = Menuweb.objects.filter(livello=2)
     submenu = Menuweb.objects.filter(livello=3)
-    slider = Slider.objects.filter(codice=luogo)[:]
+    slider = Slider.object
+#from Connect import Connects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel="carousel"
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel":carousel}
-    return render(request, "beb/lasala_frame.html", context)
+    carousel = "slide"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
+    return render(request, "beb/carousel.html", context)
+
 
 def ilpaese(request):
     #luogo = request.GET.get('luogo')
@@ -126,9 +131,10 @@ def ilpaese(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel="carousel"
-    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel":carousel}
+    carousel = "slide"
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
+
 
 def linkutili(request):
     #luogo = request.GET.get('luogo')

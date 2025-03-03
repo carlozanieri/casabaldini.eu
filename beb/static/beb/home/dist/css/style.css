@@ -25,7 +25,7 @@ body {
 .carousel .carousel-item {
 	cursor: -webkit-grab;
 	cursor: grab;
-	width: 80%;
+	width: 100%;
 }
 
 .carousel .carousel-item:active {
