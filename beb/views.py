@@ -15,7 +15,7 @@ def index(request):
     links = Links.objects.all()[:]
     #slider = Connect.slider("", "mugello")
     #luogo = request.GET.get('luogo')
-    carousel="slide"
+    carousel = "slide"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "links": links, "luogo": luogo, "carousel":carousel}
    
     return render(request, "beb/index.html", context)
