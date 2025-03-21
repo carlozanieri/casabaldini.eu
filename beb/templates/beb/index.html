@@ -15,8 +15,8 @@
   	<script src="{% static 'beb/js/jquery.js'%}"></script>
 	<script src="{% static 'beb/menu_6/js/modernizr.custom.js'%}"></script>
 	<link rel="shortcut icon" href="{% static 'beb/favicon.ico'%}"/> 
-	<link rel="stylesheet" type="text/css" href="{% static 'beb/menu_6/css/default.css'%}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'beb/menu_6/css/component.css'%}" />
+<!--	<link rel="stylesheet" type="text/css" href="{% static 'beb/menu_6/css/default.css'%}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'beb/menu_6/css/component.css'%}" />-->
 		
 	   
 </head>
@@ -35,7 +35,7 @@
 
 <iframe  scrolling="no" width="35%" height="80%" src="/beb/lasala_frame?luogo={{luogo}}" frameborder="0" style="position: absolute;top: 2%; bottom: 10%;	right:0.3%"></iframe> -->
 
-<iframe  width="100%" height="100%" src="/beb/{{carousel}}?luogo={{luogo}}" frameborder="0" style="position: absolute;top: 2%; bottom: 10%; left: -5%;	"></iframe>
+<iframe  width="100%" height="100%" src="/beb/{{carousel}}?luogo={{luogo}}" frameborder="0" style="position: absolute;	width: 100%;"></iframe>
 <span style="position: absolute; top: -3.3%;	left:-3% ;">{% include 'beb/menu5.html' %}</span>
 </body>
 
