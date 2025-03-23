@@ -15,25 +15,43 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
 <script type="text/javascript" src="{% static 'beb/home/dist/js/jquery.sliderPro.min.js'%}"></script>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	$( document ).ready(function( $ ) {
-		$( '#example1' ).sliderPro({
-			width: 1600,
-			height: 450,
+		$( '#example3' ).sliderPro({
+			width: 20%,
+			height: 2.2%%,
 			arrows: true,
 			buttons: false,
 			waitForLayers: true,
-			thumbnailWidth: 200,
-			thumbnailHeight: 100,
+			thumbnailWidth: 20%,
+			thumbnailHeight: 2.2%,
 			thumbnailPointer: true,
 			autoplay: true,
 			autoScaleLayers: true,
 			breakpoints: {
 				500: {
-					thumbnailWidth: 120,
-					thumbnailHeight: 50
+					thumbnailWidth: 20%,
+					thumbnailHeight: 2.2%
 				}
 			}
+		});
+	});
+</script>-->
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example1' ).sliderPro({
+			width: 50%,
+			height: 15%,
+			fade: true,
+			arrows: true,
+			buttons: false,
+			fullScreen: true,
+			shuffle: true,
+			smallSize: 25%,
+			mediumSize: 50%,
+			largeSize: 100%,
+			thumbnailArrows: true,
+			autoplay: false
 		});
 	});
 </script>
@@ -47,7 +65,7 @@
 			{% for sliders in slider %}
 
 	        <div class="sp-slide">
-				<img  style="width:100%; height: auto;" src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="{{sliders.caption}}" />
+				<img style= "position: relative; "  src= "{% static 'beb/img/'%}{{luogo}}/{{sliders.img}}" alt="" title="{{sliders.caption}}" />
 
 				<h3 class="sp-layer sp-black sp-padding" 
 					data-horizontal="40" data-vertical="10%" 

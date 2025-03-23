@@ -78,9 +78,9 @@ def camere(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "slide"
+    carousel = "carousel"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel": carousel}
-    return render(request, "beb/index.html", context)
+    return render(request, "beb/Blue-Slider-master/index.html", context)
 
 
 def camere_frame(request):
@@ -106,7 +106,7 @@ def lasala(request):
     links = Links.objects.all()[:]
     carousel = "slide"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
-    return render(request, "beb/index.html", context)
+    return render(request, "beb/Blue-Slider-master/index.html", context)
 
 
 def lasala_frame(request):
