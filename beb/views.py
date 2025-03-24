@@ -39,6 +39,28 @@ def slide(request):
     return render(request, "beb/home/home.html", context)
 
 
+def blueslider(request):
+    luogo = request.GET.get('luogo')
+    ##slider = Slider.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    camere = Slider.objects.filter(codice="camere")[:]
+    #slider = Connect.slider("", "mugello")
+    context = {"slider": slider, "luogo": luogo, "camere": camere}
+    #return render(request, "beb/nivo.html", context)
+    return render(request, "beb/Blue-Slider-master/index.html", context)
+
+
+def blueslider2(request):
+    luogo = request.GET.get('luogo')
+    ##slider = Slider.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    camere = Slider.objects.filter(codice="camere")[:]
+    #slider = Connect.slider("", "mugello")
+    context = {"slider": slider, "luogo": luogo, "camere": camere}
+    #return render(request, "beb/nivo.html", context)
+    return render(request, "beb/Blue-Slider-master/index2.html", context)
+
+
 def carousel(request):
     luogo = request.GET.get('luogo')
     ##slider = Slider.objects.all()[:]
@@ -78,9 +100,9 @@ def camere(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "carousel"
+    carousel = "blueslider"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel": carousel}
-    return render(request, "beb/Blue-Slider-master/index.html", context)
+    return render(request, "beb/index.html", context)
 
 
 def camere_frame(request):
@@ -104,9 +126,9 @@ def lasala(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "slide"
+    carousel = "blueslider2"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
-    return render(request, "beb/Blue-Slider-master/index.html", context)
+    return render(request, "beb/index.html", context)
 
 
 def lasala_frame(request):
