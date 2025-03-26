@@ -126,7 +126,7 @@ def lasala(request):
     submenu = Menuweb.objects.filter(livello=3)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "blueslider2"
+    carousel = "blueslider"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
 
