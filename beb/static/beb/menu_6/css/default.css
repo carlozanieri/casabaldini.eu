@@ -151,7 +151,7 @@ a:hover {
 	content: '';
 	position: absolute;
 	height: 7px;
-	background: #ceccc6;
+	background: #ffffff;
 	top: 100px;
 	left: 10px;
 }
@@ -175,7 +175,7 @@ a:hover {
 	font-size: 2.625em;
 	line-height: 1.3;
 	margin: 0;
-	color: #89867e;
+	color: #ffffff;
 	font-weight: 300;
 }
 
@@ -188,7 +188,7 @@ a:hover {
 
 /* Header Style */
 .codrops-top {
-	background: #fff;
+	background: #ffffff;
 	background: rgba(255, 255, 255, 0.95);
 	text-transform: uppercase;
 	position: relative;
