@@ -9,8 +9,8 @@ from .models import Slider
 def index(request):
     luogo = "index"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     slider = Slider.objects.filter(codice=luogo)
     links = Links.objects.all()[:]
     #slider = Connect.slider("", "mugello")
@@ -86,8 +86,8 @@ def camere__1(request):
 
 def menu(request):
         
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     context = {"menuweb": menuweb, "submenu": submenu}
     return render(request, "beb/menu5.html", context)
 
@@ -96,8 +96,8 @@ def camere(request):
     #luogo = request.GET.get('luogo')
     luogo = "camere"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
     carousel = "blueslider"
@@ -109,8 +109,8 @@ def camere_frame(request):
     #luogo = request.GET.get('luogo')
     luogo = "camere"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
     carousel = "carousel"
@@ -122,8 +122,8 @@ def lasala(request):
     #luogo = request.GET.get('luogo')
     luogo = "lasala"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
     carousel = "blueslider"
@@ -135,8 +135,8 @@ def lasala_frame(request):
     #luogo = request.GET.get('luogo')
     luogo = "lasala"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     slider = Slider.object
 #from Connect import Connects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
@@ -149,8 +149,8 @@ def ilpaese(request):
     #luogo = request.GET.get('luogo')
     luogo = "ilpaese"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
     carousel = "blueslider"
@@ -162,8 +162,8 @@ def linkutili(request):
     #luogo = request.GET.get('luogo')
     luogo = "mugello"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2)
-    submenu = Menuweb.objects.filter(livello=3)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
+    submenu = Menuweb.objects.filter(livello=3, attivo=1)
     links = Links.objects.all()[:]
     slider = Slider.objects.filter(codice=luogo)[:]
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links,  "luogo": luogo, "slider": slider}
