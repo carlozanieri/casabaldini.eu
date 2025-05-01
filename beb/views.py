@@ -18,7 +18,7 @@ def index(request):
     carousel = "slide"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider, "links": links, "luogo": luogo, "carousel":carousel}
    
-    return render(request, "beb/home2.html", context)
+    return render(request, "beb/index.html", context)
 
 
 def detail(request, author_id):
