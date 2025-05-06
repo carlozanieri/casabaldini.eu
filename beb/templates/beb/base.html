@@ -7,6 +7,7 @@
 	<title>casabaldini.eu {{urlx}}</title>
 
 	<meta name="author" content="Carlo Zanieri" />
+	<meta http-equiv="X-Frame-Options" content="SAMEORIGIN"> 
 	<link rel="shortcut icon" href="../favicon.ico"/>
     <title>{% block title %}casabaldini.eu{% endblock %}</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -28,11 +29,10 @@
 		});	
 	</script>
 </head>
+{% block header %}
+{% endblock header %}
 <body>
-	
-    
-	
-	
+		
         {% block content %}
 		{% endblock content %}
 		<span style="position: absolute; margin-left:6.5% ; float:left;">{% include 'beb/menu5.html' %}</span>
