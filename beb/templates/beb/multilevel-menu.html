@@ -130,6 +130,25 @@
     <body>
         <nav><div class="menu-btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQMAAAADqqSRAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAACJJREFUOI1jYBgFo2CAAf9/EPgwYPyBBqP+H9n+HwUjFgAAy6+PcayOkz0AAAAASUVORK5CYII=" alt=""></div>
             <ul class="menu">
+                {% for menuwebs in menuweb %}
+							<li>
+								
+								<a href="{{menuwebs.link }}" class="gn-icon gn-icon-help">{{menuwebs.titolo}}</a>
+								
+								<ul class="dl-submenu">
+									
+									{% for submenus in submenu %}
+									<li >
+											{% if menuwebs.codice == submenus.radice %}
+                        					<a href="{{submenus.link}}" ><span></span> {{submenus.titolo}}</a>
+											<input id="codice" name="codice" type="hidden" value={{submenus.codice}} />
+											{% endif %}
+									</li>
+									{% endfor %}
+									
+								</ul>
+							</li>
+							{% endfor %}
                 <li><a href="#">Electronics</a>
                     <ul>
                         <li><a href="#">Laptops</a></li>
@@ -152,7 +171,7 @@
                         <li><a href="#">Cameras</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Men</a>
+              <!---  <li><a href="#">Men</a>
                     <ul>
                         <li><a href="#">Clothing</a>
                             <ul>
@@ -164,7 +183,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Women</a></li>
-                <li><a href="#">Offers</a></li>
+                <li><a href="#">Offers</a></li>-->
             </ul>
         </nav>
     </body>
