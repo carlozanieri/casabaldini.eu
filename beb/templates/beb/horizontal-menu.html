@@ -41,20 +41,21 @@
             {% for menuwebs in menuweb %}
             <li>
                 
-                <a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i>{{menuwebs.titolo}}<span class="arrow"></span> </a>
-                
+                <a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i>{{menuwebs.titolo}} </a>
+              
                 <ul>
                     
-                    {% for submenus in submenu %}
+                     {% for submenus in submenu %} 
                     <li >
                             {% if menuwebs.codice == submenus.radice %}
                             <a href="{{submenus.link}}" ><span></span> {{submenus.titolo}}</a>
                             <input id="codice" name="codice" type="hidden" value={{submenus.codice}} />
                             {% endif %}
                     </li>
-                    {% endfor %}
-                    
+                   
+                     {% endfor %}
                 </ul>
+                
             </li>
             {% endfor %}
           <!--  <li>
