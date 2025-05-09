@@ -31,11 +31,14 @@
 </head>
 <!--{% block header %}
 {% endblock header %}-->
+
+	
 <body>
-		
+	<span style="position: absolute; top: -5%;margin-left:20% ; float:left;">{% include 'beb/horizontal-menu.html' %}</span>
         {% block content %}
+		
 		{% endblock content %}
-		<span style="position: absolute; margin-left:21% ; margin-top:-3% ; float:left;">{% include 'beb/Menu.html' %}</span>
+		
 		<!--{% block footer %}
 		
 		
