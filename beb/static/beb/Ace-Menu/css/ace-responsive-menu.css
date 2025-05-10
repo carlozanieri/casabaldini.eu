@@ -161,7 +161,7 @@ ul {
 }
 .menu-toggle .icon-bar {
     display: block !important;
-    width: 14px;
+    width: 16px;
     height: 2px;
     background-color: #250202 !important;
     -webkit-border-radius: 1px;
