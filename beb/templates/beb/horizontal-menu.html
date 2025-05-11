@@ -22,9 +22,6 @@
 <body>
     <div class="demo">    
 	
-   <!-- <br/>
-    <a href="#" class="backLink">back</a>		
-    Ace Responsive Menu -->
     <nav>
         <!-- Menu Toggle btn-->
         <div class="menu-toggle">
@@ -40,148 +37,32 @@
         <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
             {% for menuwebs in menuweb %}
             <li>
+               <a href="javascript:;">
+                <a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i><span class="title">{{menuwebs.titolo}}</span> </a>
+                 <span class="arrow"></span>
+                </a> 
                 
-                <a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i>{{menuwebs.titolo}} </a>
-              
                 <ul>
-                    
-                     {% for submenus in submenu %} 
+                {% for submenus in submenu %}    
+                     
+                    {% if menuwebs.codice == submenus.radice %} 
+                     
                     <li >
-                            {% if menuwebs.codice == submenus.radice %}
-                            <a href="{{submenus.link}}" ><span></span> {{submenus.titolo}}</a>
+                            
+                            <a href="{{submenus.link}}" >{{submenus.titolo}}</a>
                             <input id="codice" name="codice" type="hidden" value={{submenus.codice}} />
-                            {% endif %}
+                            
                     </li>
-                   
-                     {% endfor %}
-                </ul>
-                
-            </li>
-            {% endfor %}
-          <!--  <li>
-                <a href="javascript:;">
-                    <i class="fa fa-cube" aria-hidden="true"></i>
-                    <span class="title">About Us</span>
-		    <span class="arrow"></span> 
-
-                </a>
-                
-                <ul>
-                    <li>
-                        <a href="#">Sub Item One</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Item Two</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Item Three</a>
-                    </li>
-                    <li>
-                        <a href="#">Sub Item Four</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="javascript:;">
-                    <i class="fa fa-crop" aria-hidden="true"></i>
-                    <span class="title">4 Level Menu</span>
-			<span class="arrow"></span> 
-                </a>
-               
-                <ul>
-                   <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            Sub Item One						
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-database" aria-hidden="true"></i>
-                            Sub Item Two
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-amazon" aria-hidden="true"></i>
-                            Sub Item Three							
-                        </a>
-                       
-                        <ul>
-                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Sub Item Link 1</a></li>
-                            <li>
-                                <a href="javascript:;">
-                                    <i class="fa fa-diamond" aria-hidden="true"></i>Sub Item Link 2</a>
-                               
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i>Sub Item Link 1</a></li>
-                                    <li><a href="#"><i class="fa fa-dashcube" aria-hidden="true"></i>Sub Item Link 2</a></li>
-                                    <li><a href="#"><i class="fa fa-dropbox" aria-hidden="true"></i>Sub Item Link 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>Sub Item Link 3</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-database" aria-hidden="true"></i>
-                            Sub Item Four
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="" href="javascript:;">
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                    <span class="title">Services</span>
-			<span class="arrow"></span> 
-                </a>
-                <ul>
-                    <li>
-                        <a href="#">Sub Item One
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">Sub Item Two							
-                        </a>
-                        <ul>
-                            <li><a href="#">Sub Item Link 1</a></li>
-                            <li><a href="#">Sub Item Link 2</a></li>
-                            <li><a href="#">Sub Item Link 3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:;">Sub Item Three							
-                        </a>
-                        <ul>
-                            <li><a href="#">Sub Item Link 1</a></li>
-                            <li><a href="#">Sub Item Link 1</a></li>
-                            <li><a href="#">Sub Item Link 1</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Sub Item Four
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                    <span class="title">Products</span>
-                </a>
-            </li>
-            <li class="last ">
-                <a href="javascript:;">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span class="title">Contact Us</span>
-                </a>
-            </li>
-        </ul>-->
+                    
+                        {% endif %}
+                {% endfor %}
+                 
+    </ul>
+    </li>
+    {% endfor %}   
+    </ul>
     </nav>
-     <!--End of Responsive Menu -->
+     
     </div>
     <!--Scripts-->
     <script src="{% static 'beb/Ace-Menu/js/jquery-1.10.1.min.js'%}" type="text/javascript"></script>

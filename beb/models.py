@@ -15,19 +15,19 @@ class Menuweb(models.Model):
     ordine = models.IntegerField(default=0)
 
 
-class Blog(models.Model):
-    author_id = models.IntegerField(default=0)
-    title = models.CharField(max_length=512)
-    markdown = models.CharField(max_length=255)
-    html = models.CharField(max_length=512)
-    published = models.DateTimeField("date published")
-    updated = models.DateTimeField("date published")
-    img = models.CharField(max_length=100)
-    dir = models.CharField(max_length=100)
-    html2 = models.CharField(max_length=255)
-    html3 = models.CharField(max_length=255)
-    img2 = models.CharField(max_length=100)
-    img3 = models.CharField(max_length=100)
+#class Blog(models.Model):
+#    author_id = models.IntegerField(default=0)
+#    title = models.CharField(max_length=512)
+#    markdown = models.CharField(max_length=255)
+#    html = models.CharField(max_length=512)
+#    published = models.DateTimeField("date published")
+#    updated = models.DateTimeField("date published")
+#    img = models.CharField(max_length=100)
+#    dir = models.CharField(max_length=100)
+#    html2 = models.CharField(max_length=255)
+#    html3 = models.CharField(max_length=255)
+#    img2 = models.CharField(max_length=100)
+#    img3 = models.CharField(max_length=100)
 
 
 class Entries(models.Model):
