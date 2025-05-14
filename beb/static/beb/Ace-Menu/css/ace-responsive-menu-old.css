@@ -150,7 +150,7 @@ ul {
     display: none;
     float: left;
     width: 100%;
-    background: #333;
+    background: #290000;
 }
 .menu-toggle h3 {
     float: left;
@@ -163,26 +163,26 @@ ul {
     display: block !important;
     width: 18px;
     height: 2px;
-    background-color: #F5F5F5 !important;
+    background-color: #250202 !important;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    margin: 3px;
+    margin: 1px;
 }
 .menu-toggle .icon-bar:hover {
     background-color: #F5F5F5 !important;
 }
 .menu-toggle #menu-btn {
     float: right;
-    background: #202020;
+    background: #360101;
     border: 1px solid #0C0C0C;
-    padding: 8px;
+    padding: 4px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
+    margin: 1px;
 }
 .hide-menu {
     display: none;
@@ -319,7 +319,7 @@ ul[data-menu-style="vertical"] li a:hover {
         color: #FF5737;
     }
     .ace-responsive-menu > li > a > .arrow:before {
-        float: right;
+        
          content: " \276F";
 		font-weight: 300;
 		text-shadow: none;

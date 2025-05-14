@@ -89,7 +89,7 @@ def menu(request):
     menuweb = Menuweb.objects.filter(livello=2, attivo=1)
     submenu = Menuweb.objects.filter(livello=3, attivo=1)
     context = {"menuweb": menuweb, "submenu": submenu}
-    return render(request, "beb/menu5.html", context)
+    return render(request, "beb/AceMenu.html", context)
 
 
 def camere(request):

@@ -43,24 +43,32 @@
                 </a> 
                 
                 <ul>
-                {% for submenus in submenu %}    
+                    {% for submenus in submenu %}    
                      
-                    {% if menuwebs.codice == submenus.radice %} 
+                   
+                     {% if menuwebs.codice == submenus.radice %} 
+                    <li>
+                            #<a href="javascript:;"></a>
+                              
                      
-                    <li >
                             
+                            <ul>
                             <a href="{{submenus.link}}" >{{submenus.titolo}}</a>
                             <input id="codice" name="codice" type="hidden" value={{submenus.codice}} />
+                            </ul>
+                            
                             
                     </li>
-                    
-                        {% endif %}
-                {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                   
                  
-    </ul>
-    </li>
-    {% endfor %}   
-    </ul>
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+           
+        
     </nav>
      
     </div>
