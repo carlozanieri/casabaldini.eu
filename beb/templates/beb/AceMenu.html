@@ -38,18 +38,29 @@
                 {% for menuwebs in menuweb %}
                 <li>
                     <a href="javascript:;">
-                    
-                        <a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i><span class="title">{{menuwebs.titolo}}</span> </a>
-                        <span class="arrow"></span>
-                
+                           
+                       <span class="title">{{menuwebs.titolo}} </span>
+                       <!--<a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i>{{menuwebs.titolo}} </a>-->
+                        {% for submenus in submenu %} 
+                        
+                            {% if menuwebs.codice == submenus.radice and forloop.counter == 1 %}   
+                                    <span class="arrow">{{forloop.counter}}</span>
+                                   
+                            {% endif %}
+                            <!--{{forloop.counter}} {{ menuwebs.codice}} {{submenus.radice}}-->
+                        {% endfor %}                       
+                                     
+                      
+                                               
 		            </a>
-                    
+                   
                     
                     <ul>
                         {% for submenus in submenu %} 
                             {% if menuwebs.codice == submenus.radice %}
+                                
                                 <li>
-                                   <a href="javascript:;">
+                                
                                  <a href="{{submenus.link}}" >{{submenus.titolo}}</a>
                                  </a>                            
                                 </li>
