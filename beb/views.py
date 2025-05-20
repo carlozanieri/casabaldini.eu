@@ -9,8 +9,8 @@ from .models import Slider
 def index(request):
     luogo = "index"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2, attivo=1).order_by('codice')
-    submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('radice')
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1).order_by('ordine' , 'codice')
+    submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('ordine', 'radice')
     slider = Slider.objects.filter(codice=luogo)
     links = Links.objects.all()[:]
     #slider = Connect.slider("", "mugello")
