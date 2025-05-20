@@ -34,23 +34,16 @@
             <!-- Responsive Menu Structure-->
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
-              
+             
                 {% for menuwebs in menuweb %}
                 <li>
+                    
                     <a href="javascript:;">
                            
                        <span class="title">{{menuwebs.titolo}} </span>
-                       <!--<a href="{{menuwebs.link }}" class="gn-icon gn-icon-help"><i class="fa fa-cube" aria-hidden="true"></i>{{menuwebs.titolo}} </a>-->
-                        {% for submenus in submenu %} 
+                           
+                         
                         
-                            {% if menuwebs.codice == submenus.radice and forloop.counter == 1 %}   
-                                    <span class="arrow">{{forloop.counter}}</span>
-                                   
-                            {% endif %}
-                            <!--{{forloop.counter}} {{ menuwebs.codice}} {{submenus.radice}}-->
-                        {% endfor %}                       
-                                     
-                      
                                                
 		            </a>
                    

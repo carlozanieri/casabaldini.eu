@@ -9,8 +9,8 @@ from .models import Slider
 def index(request):
     luogo = "index"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
-    submenu = Menuweb.objects.filter(livello=3, attivo=1)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1).order_by('codice')
+    submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('radice')
     slider = Slider.objects.filter(codice=luogo)
     links = Links.objects.all()[:]
     #slider = Connect.slider("", "mugello")
@@ -96,8 +96,8 @@ def camere(request):
     #luogo = request.GET.get('luogo')
     luogo = "camere"
     entries = Entries.objects.filter(slug=luogo)
-    menuweb = Menuweb.objects.filter(livello=2, attivo=1)
-    submenu = Menuweb.objects.filter(livello=3, attivo=1)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1).order_by('codice')
+    submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('radice')
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
     carousel = "blueslider"
