@@ -41,8 +41,20 @@
                     <a href="javascript:;">
                            
                        <span class="title">{{menuwebs.titolo}} </span>
-                           
-                       
+                        
+                  
+                    {% for submenus in submenu %}
+                    
+                    {% if menuwebs.codice == submenus.radice %}
+                    
+                     {% ifchanged %}
+                        <span class="arrow"></span>
+                    {% endifchanged %}
+                    
+                    {% endif %}
+                    {% endfor %}
+                    
+                                              
 		            </a>
                    
                     
