@@ -114,7 +114,7 @@ def camere(request):
     submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('ordine', 'radice')
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "blueslider"
+    carousel = "slide"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,   "links": links,"luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
 
@@ -140,7 +140,7 @@ def lasala(request):
     submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('ordine', 'radice')
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "blueslider"
+    carousel = "slide"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
 
@@ -167,7 +167,7 @@ def ilpaese(request):
     submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('ordine', 'radice')
     slider = Slider.objects.filter(codice=luogo)[:]
     links = Links.objects.all()[:]
-    carousel = "blueslider"
+    carousel = "slide"
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "slider": slider,  "links": links, "luogo": luogo, "carousel": carousel}
     return render(request, "beb/index.html", context)
 
