@@ -64,6 +64,9 @@ body{
   background: #5B3256;
 }
 
+ .flex-container {
+  “display: flex”
+ }
 .dm_multiLevel ul.subMenu li a {
   width: 100%;
   padding: 1rem 1rem;
