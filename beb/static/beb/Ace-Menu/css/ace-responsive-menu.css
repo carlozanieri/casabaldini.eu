@@ -23,7 +23,7 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    background: #333;
+    background: #270101;
     float:left;
     width:100%;
     font-family: 'Roboto', sans-serif;
@@ -100,7 +100,7 @@ ul {
     z-index: 999;
 }
 .ace-responsive-menu li ul.sub-menu {
-    background: #333;
+    background: #270101;
 }
 .ace-responsive-menu li ul.sub-menu > li {
     width: 185px;
@@ -150,7 +150,7 @@ ul {
     display: none;
     float: left;
     width: 100%;
-    background: #333;
+    background: #270101;
 }
 .menu-toggle h3 {
     float: left;
@@ -177,7 +177,7 @@ ul {
 }
 .menu-toggle #menu-btn {
     float: right;
-    background: #202020;
+    background: #270101;
     border: 1px solid #0C0C0C;
     padding: 8px;
     border-radius: 5px;
@@ -188,7 +188,9 @@ ul {
     display: none;
 }
 
-
+.flex-container {
+  “display: flex”
+ }
 /* Accordion Menu Styles
 ----------------------------------------*/
 
@@ -305,7 +307,7 @@ ul[data-menu-style="vertical"] li a:hover {
         width:100%;
     }
     .ace-responsive-menu > li {
-        border-bottom: 1px solid #242424;
+        border-bottom: 1px solid #330202;
        float: none;
     }   
     .ace-responsive-menu li a:hover {
