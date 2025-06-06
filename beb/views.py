@@ -182,3 +182,15 @@ def linkutili(request):
     slider = Slider.objects.filter(codice=luogo)[:]
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links,  "luogo": luogo, "slider": slider}
     return render(request, "beb/linkutili.html", context)
+
+
+def modal(request):
+    #luogo = request.GET.get('luogo')
+    luogo = "mugello"
+    entries = Entries.objects.filter(slug=luogo)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1).order_by('ordine' , 'codice')
+    submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('ordine', 'radice')
+    links = Links.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links,  "luogo": luogo, "slider": slider}
+    return render(request, "beb/popin2.html", context)
