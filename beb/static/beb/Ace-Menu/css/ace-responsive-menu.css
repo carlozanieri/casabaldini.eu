@@ -211,7 +211,7 @@ ul[data-menu-style="accordion"] li ul.sub-menu > li {
     width: 100%;
 }
 ul[data-menu-style="accordion"] > li > a > .arrow:before {
-    float: right;
+    float: left;
     content: "\f105";
 }
 ul[data-menu-style="accordion"] li.menu-active > a > .arrow:before {
