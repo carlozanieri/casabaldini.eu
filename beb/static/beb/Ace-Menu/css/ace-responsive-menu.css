@@ -24,7 +24,7 @@ ul {
     margin: 0;
     padding: 0;
     background: #270101;
-    float:right;
+    float:left;
     width:100%;
     font-family: 'Roboto', sans-serif;
     /* border-bottom: 3px solid #FD5025; */
@@ -162,7 +162,7 @@ ul {
 .menu-toggle .icon-bar {
     display: block !important;
     width: 18px;
-    height: 2.5px;
+    height: 2px;
     background-color: #F5F5F5 !important;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -176,7 +176,7 @@ ul {
     background-color: #F5F5F5 !important;
 }
 .menu-toggle #menu-btn {
-    
+    float: right;
     background: #270101;
     border: 1px solid #0C0C0C;
     padding: 8px;
@@ -211,7 +211,7 @@ ul[data-menu-style="accordion"] li ul.sub-menu > li {
     width: 100%;
 }
 ul[data-menu-style="accordion"] > li > a > .arrow:before {
-    float: left;
+    float: right;
     content: "\f105";
 }
 ul[data-menu-style="accordion"] li.menu-active > a > .arrow:before {
