@@ -95,17 +95,17 @@
     <input id="popin_check_1" type="checkbox" class="popin_check" hidden checked="true" />
     <label class="layer fadeIn" for="popin_check_1"></label>
     <div class="content fadeIn" style="background-image:url({% static 'beb/bg.png'%}); background-repeat:repeat;">
-        <div class="header">Title<label class="close_popin" for="popin_check_1">X</label></div>
+        <div class="header">Prenotazioni<label class="close_popin" for="popin_check_1">X</label></div>
         <div class="main">
-            {% for link in links %}
+           
 		
-	    <a style="width: 100%; color:#000000; font-size: 1.5em; margin-left:2%; margin-top:5%; font-weight: bold;" href="{{link.link}}"> <img  src="{% static 'beb/img/links/'%}{{link.img}}" width={{link.width}} height={{link.height}} alt=""/>&nbsp; {{link.titolo}} </a>
-		<br>	
-	    {% endfor %} 
-        </div>
-        <a class="modal-button" href="/home">HOME</a>
+	     <img  style="width: 10%; color:#000000; font-size: 1.5em; margin-left:2%; margin-top:5%; font-weight: bold;" src="{% static 'beb/img/telefono_4.jpg'%}"> Telefonando al <b>+39 3207060411 </b></img>
+         <br>
+         <img  style="width: 10%; color:#000000; font-size: 1.5em; margin-left:2%; margin-top:5%; font-weight: bold;" src="{% static 'beb/img/email_3.jpg'%}"> Inviando un E-Mail a <b>bruna.bbaldini@gmail.com </b></img>
+
         <!--<label class="modal-button close" for="popin_check_1">Close</label>-->
     </div>
+     <a class="modal-button" href="/home">HOME</a>
 </div>
 
 

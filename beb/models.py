@@ -84,3 +84,15 @@ class Links(models.Model):
     attivo = models.IntegerField(default=0)
     width = models.CharField(max_length=6, default='5%')
     height = models.CharField(max_length=6, default='5%')
+
+
+class Food(models.Model):
+    #ID = models.AutoField(primary_key=True)
+    codice = models.CharField(max_length=24)
+    img = models.CharField(max_length=100)
+    titolo = models.CharField(max_length=64)
+    descrizione = models.CharField(max_length=512, default=" ")
+    link = models.CharField(max_length=512)
+    attivo = models.IntegerField(default=0)
+    width = models.CharField(max_length=6, default='5%')
+    height = models.CharField(max_length=6, default='5%')
