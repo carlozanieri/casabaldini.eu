@@ -20,6 +20,7 @@ urlpatterns = [
     path("lasala_frame", views.lasala_frame, name="lasala_frame"),
     path("modal", views.modal, name="modal"),
     path("prenotazioni", views.prenotazioni, name="prenotazioni"),
+    path("dovemangiare", views.dovemangiare, name="dovemangiare"),
    
    
 ]

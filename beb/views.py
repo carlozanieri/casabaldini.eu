@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.clickjacking import xframe_options_exempt
 
-from .models import Links, Menuweb
+from .models import Food, Links, Menuweb
 from .models import Entries
 from .models import Slider
 
@@ -205,3 +205,15 @@ def prenotazioni(request):
     slider = Slider.objects.filter(codice=luogo)[:]
     context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links,  "luogo": luogo, "slider": slider}
     return render(request, "beb/prenotazioni.html", context)
+
+def dovemangiare(request):
+    #luogo = request.GET.get('luogo')
+    luogo = "mugello"
+    entries = Entries.objects.filter(slug=luogo)
+    menuweb = Menuweb.objects.filter(livello=2, attivo=1).order_by('ordine' , 'codice')
+    submenu = Menuweb.objects.filter(livello=3, attivo=1).order_by('ordine', 'radice')
+    links = Links.objects.all()[:]
+    foods = Food.objects.all()[:]
+    slider = Slider.objects.filter(codice=luogo)[:]
+    context = {"entries": entries, "menuweb": menuweb, "submenu": submenu, "links": links, "foods": foods, "luogo": luogo, "slider": slider}
+    return render(request, "beb/dovemangiare.html", context)

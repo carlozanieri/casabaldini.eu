@@ -92,6 +92,8 @@ class Food(models.Model):
     img = models.CharField(max_length=100)
     titolo = models.CharField(max_length=64)
     descrizione = models.CharField(max_length=512, default=" ")
+    indirizzo = models.CharField(max_length=64, default=" ")
+    telefono = models.CharField(max_length=64, default=" ")
     link = models.CharField(max_length=512)
     attivo = models.IntegerField(default=0)
     width = models.CharField(max_length=6, default='5%')
