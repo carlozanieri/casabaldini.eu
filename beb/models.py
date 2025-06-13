@@ -98,3 +98,4 @@ class Food(models.Model):
     attivo = models.IntegerField(default=0)
     width = models.CharField(max_length=6, default='5%')
     height = models.CharField(max_length=6, default='5%')
+    apiedi = models.CharField(max_length=4, default=" " )
